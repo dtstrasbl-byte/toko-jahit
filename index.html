@@ -1,26 +1,85 @@
 <!doctype html>
 <html lang="id" class="scroll-smooth">
   <head>
-    <title>Toko Jahit - Jasa Jahit dan Permak Pakaian</title>
-
-<meta name="description"
-      content="Toko Jahit menyediakan jasa jahit dan permak pakaian berkualitas untuk kebutuhan sehari-hari.">
-
-<meta name="keywords"
-      content="toko jahit, jasa jahit, permak pakaian, jahit baju">
-
-<meta name="robots" content="index, follow">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jahit Pagi - Jasa Jahit Baju Custom &amp; Permak di Sendang Mulyo</title>
-    <meta name="description" content="Penjahit UMKM di Sendang Mulyo. Baju custom dari nol, permak pakaian lama, sampai seragam tim kecil. Pengukuran gratis, revisi 2x." />
+
+    <!-- ================= SEO ================= -->
+    <title>
+      Jasa Jahit & Permak Pakaian di Sendang Mulyo | Berkah Duta Konveksi
+    </title>
+
+    <meta
+      name="description"
+      content="Berkah Duta Konveksi menyediakan jasa jahit dan permak pakaian di Sendang Mulyo. Melayani jahit baju custom, seragam, kebaya, kemeja, celana, dan berbagai kebutuhan jahit."
+    />
+
+    <meta
+      name="keywords"
+      content="toko jahit Sendang Mulyo, jasa jahit Sendang Mulyo, permak pakaian, jahit baju custom, jahit seragam, Berkah Duta Konveksi"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://toko-jahit.vercel.app/" />
+
+    <!-- ================= OPEN GRAPH ================= -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Jasa Jahit & Permak Pakaian di Sendang Mulyo | Berkah Duta Konveksi"
+    />
+    <meta
+      property="og:description"
+      content="Melayani jahit baju custom, permak pakaian, seragam, kebaya, kemeja, dan celana di Sendang Mulyo."
+    />
+    <meta
+      property="og:url"
+      content="https://toko-jahit.vercel.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://toko-jahit.vercel.app/Gambar/duta.png"
+    />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- ================= LOCAL BUSINESS SCHEMA ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Berkah Duta Konveksi",
+      "url": "https://toko-jahit.vercel.app/",
+      "telephone": "+6285839887894",
+      "description": "Jasa jahit dan permak pakaian di Sendang Mulyo. Melayani jahit baju custom, seragam, kebaya, kemeja, celana, dan berbagai kebutuhan jahit.",
+      "image": "https://toko-jahit.vercel.app/Gambar/duta.png",
+      "priceRange": "Rp",
+      "openingHours": "Mo-Sa 09:00-17:00",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Sendang Mulyo Dusun 08 RT 03/08",
+        "addressLocality": "Sendang Mulyo",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Cabinet Grotesk -->
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Phosphor Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
 
     <script>
       tailwind.config = {
@@ -44,11 +103,6 @@
     </script>
 
     <style>
-      /* ============================================================
-         THEME TOKENS - keluarga "Cobalt + Cream".
-         Light default (kepercayaan UMKM lokal), dark via OS.
-         Tidak ada pure #000 / #fff.
-         ============================================================ */
       :root {
         --paper: #f3f1ea;
         --card: #fbfaf6;
@@ -60,6 +114,7 @@
         --acc-ink: #f4f5ff;
         --scrim: rgba(16, 14, 26, 0.66);
       }
+
       @media (prefers-color-scheme: dark) {
         :root {
           --paper: #101116;
@@ -78,14 +133,11 @@
         background: var(--acc);
         color: var(--acc-ink);
       }
+
       html {
         background: var(--paper);
       }
 
-      /* Sistem radius terdokumentasi:
-         tombol & pill = full radius, panel/kartu/bento = 16px (rounded-2xl). */
-
-      /* ===== Motion (MOTION_INTENSITY 5, semua di-gate reduced-motion) ===== */
       @media (prefers-reduced-motion: no-preference) {
         .reveal {
           opacity: 0;
@@ -95,6 +147,7 @@
             transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
           transition-delay: calc(var(--stagger, 0) * 90ms);
         }
+
         .reveal.in {
           opacity: 1;
           transform: translateY(0);
@@ -108,9 +161,11 @@
             transform: translateX(-50%);
           }
         }
+
         .marquee-track {
           animation: marquee 30s linear infinite;
         }
+
         .marquee:hover .marquee-track {
           animation-play-state: paused;
         }
@@ -125,6 +180,7 @@
             transform: translateY(0);
           }
         }
+
         .hero-in {
           opacity: 0;
           animation: heroIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -132,19 +188,21 @@
         }
       }
 
-      /* Feedback taktil tombol */
       .btn {
         transition:
           transform 0.15s ease,
           filter 0.2s ease,
           border-color 0.2s ease;
       }
+
       .btn:hover {
         filter: brightness(1.06);
       }
+
       .btn:active {
         transform: scale(0.98) translateY(1px);
       }
+
       .btn:focus-visible,
       a:focus-visible,
       summary:focus-visible,
@@ -154,20 +212,26 @@
         border-radius: 6px;
       }
 
-      /* FAQ accordion */
       details summary::-webkit-details-marker {
         display: none;
       }
+
       details[open] .faq-icon {
         transform: rotate(45deg);
       }
+
       .faq-icon {
         transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      /* Marquee edge fade */
       .marquee-fade {
-        mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 8%,
+          black 92%,
+          transparent
+        );
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -179,212 +243,462 @@
   </head>
 
   <body class="bg-paper text-ink font-sans antialiased selection:bg-acc">
-    <!-- ================= NAV (satu baris desktop, tinggi 68px) ================= -->
-    <header id="nav" class="fixed inset-x-0 top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
-      <nav class="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between px-5 md:px-10" aria-label="Navigasi utama">
+
+    <!-- ================= NAV ================= -->
+    <header
+      id="nav"
+      class="fixed inset-x-0 top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between px-5 md:px-10"
+        aria-label="Navigasi utama"
+      >
         <a href="#" class="flex items-center gap-2">
-          <span class="grid h-7 w-7 place-items-center rounded-full bg-acc text-sm font-extrabold text-accInk">BDK</span>
-          <span class="text-lg font-extrabold tracking-tight">Berkah Duta Konveksi</span>
+          <span
+            class="grid h-7 w-7 place-items-center rounded-full bg-acc text-sm font-extrabold text-accInk"
+          >
+            BDK
+          </span>
+
+          <span class="text-lg font-extrabold tracking-tight">
+            Berkah Duta Konveksi
+          </span>
         </a>
-        <div class="hidden items-center gap-8 text-sm font-medium text-mut lg:flex">
-          <a href="#layanan" class="transition-colors hover:text-ink">Layanan</a>
-          <a href="#galeri" class="transition-colors hover:text-ink">Galeri</a>
-          <a href="#cara-pesan" class="transition-colors hover:text-ink">Cara pesan</a>
-          <a href="#harga" class="transition-colors hover:text-ink">Harga</a>
-          <a href="#faq" class="transition-colors hover:text-ink">FAQ</a>
+
+        <div
+          class="hidden items-center gap-8 text-sm font-medium text-mut lg:flex"
+        >
+          <a href="#layanan" class="transition-colors hover:text-ink">
+            Layanan
+          </a>
+          <a href="#galeri" class="transition-colors hover:text-ink">
+            Galeri
+          </a>
+          <a href="#cara-pesan" class="transition-colors hover:text-ink">
+            Cara pesan
+          </a>
+          <a href="#harga" class="transition-colors hover:text-ink">
+            Harga
+          </a>
+          <a href="#faq" class="transition-colors hover:text-ink">
+            FAQ
+          </a>
         </div>
-        <!-- <a href="https://wa.me/6285839887894" target="_blank" rel="noopener" class="btn hidden rounded-full bg-acc px-5 py-2.5 text-sm font-bold text-accInk sm:inline-block"> Chat WhatsApp </a>
-        <a href="https://wa.me/6285839887894" target="_blank" rel="noopener" class="btn rounded-full bg-acc px-4 py-2 text-sm font-bold text-accInk sm:hidden"> Chat WhatsApp </a> -->
       </nav>
     </header>
 
     <main>
-      <!-- ================= HERO: split asimetris, copy kiri / foto kanan ================= -->
-      <section class="relative flex min-h-[100dvh] items-center overflow-hidden pt-24 pb-14 md:pt-24 md:pb-0">
-        <div class="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-10 px-5 md:px-10 lg:grid-cols-[6fr_5fr] lg:gap-16">
+
+      <!-- ================= HERO ================= -->
+      <section
+        class="relative flex min-h-[100dvh] items-center overflow-hidden pt-24 pb-14 md:pt-24 md:pb-0"
+      >
+        <div
+          class="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-10 px-5 md:px-10 lg:grid-cols-[6fr_5fr] lg:gap-16"
+        >
+
           <div class="max-w-xl">
-            <p class="hero-in mb-5 inline-block rounded-full border border-line px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-mut" style="--stagger: 0">Penjahit UMKM di Sendang Mulyo</p>
-            <h1 class="hero-in text-4xl leading-[1.05] font-extrabold tracking-tighter sm:text-5xl lg:text-6xl" style="--stagger: 1">JASA JAHIT & PERMAK PAKAIAN TERPERCAYA.</h1>
-            <p class="hero-in mt-5 max-w-[46ch] text-base leading-relaxed text-mut sm:text-lg" style="--stagger: 2">Dari pakaian sehari-hari hingga seragam dan pesanan khusus.
-Kami bantu ukur, potong, dan jahit dengan teliti sesuai keinginanmu.</p>
-            <div class="hero-in mt-8 flex flex-wrap gap-3" style="--stagger: 3">
-              <a href="https://wa.me/6285839887894" target="_blank" rel="noopener" class="btn inline-flex items-center gap-2 rounded-full bg-acc px-7 py-3.5 text-base font-bold text-accInk">
-                <i class="ph ph-whatsapp-logo text-xl" aria-hidden="true"></i>
+
+            <p
+              class="hero-in mb-5 inline-block rounded-full border border-line px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-mut"
+              style="--stagger: 0"
+            >
+              Penjahit UMKM di Sendang Mulyo
+            </p>
+
+            <h1
+              class="hero-in text-4xl leading-[1.05] font-extrabold tracking-tighter sm:text-5xl lg:text-6xl"
+              style="--stagger: 1"
+            >
+              JASA JAHIT & PERMAK PAKAIAN TERPERCAYA.
+            </h1>
+
+            <p
+              class="hero-in mt-5 max-w-[46ch] text-base leading-relaxed text-mut sm:text-lg"
+              style="--stagger: 2"
+            >
+              Dari pakaian sehari-hari hingga seragam dan pesanan khusus.
+              Kami bantu ukur, potong, dan jahit dengan teliti sesuai
+              keinginanmu.
+            </p>
+
+            <div
+              class="hero-in mt-8 flex flex-wrap gap-3"
+              style="--stagger: 3"
+            >
+              <a
+                href="https://wa.me/6285839887894"
+                target="_blank"
+                rel="noopener"
+                class="btn inline-flex items-center gap-2 rounded-full bg-acc px-7 py-3.5 text-base font-bold text-accInk"
+              >
+                <i
+                  class="ph ph-whatsapp-logo text-xl"
+                  aria-hidden="true"
+                ></i>
                 Chat WhatsApp
               </a>
-              <a href="#harga" class="btn rounded-full border border-line px-7 py-3.5 text-base font-bold hover:border-acc"> Lihat harga </a>
+
+              <a
+                href="#harga"
+                class="btn rounded-full border border-line px-7 py-3.5 text-base font-bold hover:border-acc"
+              >
+                Lihat harga
+              </a>
             </div>
           </div>
 
-          <!-- Foto hero: satu foto penuh tanpa crop -->
-          <div class="hero-in relative" style="--stagger: 2">
-            <img src="Gambar/duta.png" alt="Penjahit Jahit Pagi mengerjakan pesanan baju custom di workshop" width="900" height="1200" class="w-full h-auto rounded-2xl object-contain" fetchpriority="high" />
+          <div
+            class="hero-in relative"
+            style="--stagger: 2"
+          >
+            <img
+              src="Gambar/duta.png"
+              alt="Penjahit Berkah Duta Konveksi mengerjakan pesanan baju custom"
+              width="900"
+              height="1200"
+              class="h-auto w-full rounded-2xl object-contain"
+              fetchpriority="high"
+            />
           </div>
+
         </div>
       </section>
 
-      <!-- ================= MARQUEE (satu-satunya di halaman, info nyata) ================= -->
-      <section aria-label="Informasi operasional" class="marquee marquee-fade overflow-hidden border-y border-line bg-card py-4">
+      <!-- ================= INFORMASI ================= -->
+      <section
+        aria-label="Informasi operasional Berkah Duta Konveksi"
+        class="marquee marquee-fade overflow-hidden border-y border-line bg-card py-4"
+      >
         <div class="marquee-track flex w-max whitespace-nowrap">
-          <p class="flex items-center text-sm font-bold uppercase tracking-[0.14em] text-mut">
-            <span>Senin - Sabtu 09.00 - 17.00</span><span class="mx-6 text-acc">/</span> <span>Konsultasi &amp; ukur gratis</span><span class="mx-6 text-acc">/</span> <span>Revisi 2x gratis</span><span class="mx-6 text-acc">/</span>
-            <span>Bisa bawa bahan sendiri</span><span class="mx-6 text-acc">/</span> <span>Jl. Sendang Mulyo Dusun 08 Rt 03/08 </span><span class="mx-6 text-acc">/</span> <span aria-hidden="true">Senin - Sabtu 09.00 - 17.00</span
-            ><span class="mx-6 text-acc">/</span> <span aria-hidden="true">Konsultasi &amp; ukur gratis</span><span class="mx-6 text-acc">/</span> <span aria-hidden="true">Revisi 2x gratis</span><span class="mx-6 text-acc">/</span>
-            <span aria-hidden="true">Bisa bawa bahan sendiri</span><span class="mx-6 text-acc">/</span> <span aria-hidden="true">Jl. Sendang Mulyo Dusun 08 Rt 03/08</span><span class="mx-6 text-acc">/</span>
+
+          <p
+            class="flex items-center text-sm font-bold uppercase tracking-[0.14em] text-mut"
+          >
+            <span>Senin - Sabtu 09.00 - 17.00</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Konsultasi &amp; ukur gratis</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Revisi 2x gratis</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Bisa bawa bahan sendiri</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Jl. Sendang Mulyo Dusun 08 RT 03/08</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span aria-hidden="true">Senin - Sabtu 09.00 - 17.00</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span aria-hidden="true">
+              Konsultasi &amp; ukur gratis
+            </span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span aria-hidden="true">Revisi 2x gratis</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span aria-hidden="true">
+              Bisa bawa bahan sendiri
+            </span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span aria-hidden="true">
+              Jl. Sendang Mulyo Dusun 08 RT 03/08
+            </span>
           </p>
-          <p class="flex items-center text-sm font-bold uppercase tracking-[0.14em] text-mut" aria-hidden="true">
-            <span>Senin - Sabtu 09.00 - 17.00</span><span class="mx-6 text-acc">/</span> <span>Konsultasi &amp; ukur gratis</span><span class="mx-6 text-acc">/</span> <span>Revisi 2x gratis</span><span class="mx-6 text-acc">/</span>
-            <span>Bisa bawa bahan sendiri</span><span class="mx-6 text-acc">/</span> <span>Jl. Sendang Mulyo Dusun 08 Rt 03/08/span><span class="mx-6 text-acc">/</span>
+
+          <p
+            class="flex items-center text-sm font-bold uppercase tracking-[0.14em] text-mut"
+            aria-hidden="true"
+          >
+            <span>Senin - Sabtu 09.00 - 17.00</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Konsultasi &amp; ukur gratis</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Revisi 2x gratis</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Bisa bawa bahan sendiri</span>
+            <span class="mx-6 text-acc">/</span>
+
+            <span>Jl. Sendang Mulyo Dusun 08 RT 03/08</span>
+            <span class="mx-6 text-acc">/</span>
           </p>
+
         </div>
       </section>
 
-<!-- ================= LAYANAN: bento 5 sel (5 layanan = 5 sel, tanpa foto) ================= -->
+      <!-- ================= LAYANAN ================= -->
       <section id="layanan" class="py-24 md:py-32">
-        <div class="mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl">Jenis Layanan</h2>
 
-          <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-2">
-            <!-- 1. Jahit Custom - sel besar kiri atas -->
+        <div class="mx-auto max-w-[1400px] px-5 md:px-10">
+
+          <h2
+            class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl"
+          >
+            Jenis Layanan
+          </h2>
+
+          <div
+            class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-2"
+          >
+
+            <!-- Jahit Custom -->
             <article
-              class="reveal flex flex-col justify-between rounded-2xl bg-card p-7 md:p-10 md:col-span-4 md:row-span-2 min-h-[280px] md:min-h-[380px]"
+              class="reveal flex min-h-[280px] flex-col justify-between rounded-2xl bg-card p-7 md:col-span-4 md:row-span-2 md:min-h-[380px] md:p-10"
             >
               <div>
-                <i class="ph ph-t-shirt text-3xl text-acc" aria-hidden="true"></i>
-                <p class="mt-4 text-2xl font-extrabold tracking-tight sm:text-3xl">Jahit Custom</p>
+
+                <i
+                  class="ph ph-t-shirt text-3xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
+                <p
+                  class="mt-4 text-2xl font-extrabold tracking-tight sm:text-3xl"
+                >
+                  Jahit Custom
+                </p>
+
                 <p class="mt-3 max-w-[45ch] leading-relaxed text-mut">
                   Baju dari nol: kemeja, celana, dress, kebaya, atau model
                   sendiri. Pola dibuat individual, bukan sablon ukuran.
                 </p>
+
               </div>
-              <!-- <a
-                href="https://wa.me/6285839887894"
-                target="_blank"
-                rel="noopener"
-                class="btn mt-6 self-start inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 font-bold hover:border-acc"
-              >
-                Pesan custom
-                <i class="ph ph-arrow-right" aria-hidden="true"></i>
-              </a> -->
             </article>
 
-            <!-- 2. Permak Pakaian - kanan atas -->
+            <!-- Permak -->
             <article
-              class="reveal flex flex-col justify-between rounded-2xl bg-card p-7 md:col-span-2 min-h-[180px]"
+              class="reveal flex min-h-[180px] flex-col justify-between rounded-2xl bg-card p-7 md:col-span-2"
             >
-              <i class="ph ph-scissors text-3xl text-acc" aria-hidden="true"></i>
+              <i
+                class="ph ph-scissors text-3xl text-acc"
+                aria-hidden="true"
+              ></i>
+
               <div class="mt-auto">
-                <p class="font-bold text-lg">Permak Pakaian</p>
-                <p class="mt-2 text-sm leading-relaxed text-mut">
-                  Pendekkan celana, perkecil kemeja, ganti resleting, tambah
-                  saku. Selesai 1–3 hari.
+
+                <p class="text-lg font-bold">
+                  Permak Pakaian
                 </p>
+
+                <p class="mt-2 text-sm leading-relaxed text-mut">
+                  Pendekkan celana, perkecil kemeja, ganti resleting,
+                  tambah saku. Selesai 1–3 hari.
+                </p>
+
               </div>
             </article>
 
-            <!-- 3. Jahit Seragam - kiri bawah (bg aksen untuk variasi) -->
+            <!-- Seragam -->
             <article
-              class="reveal flex flex-col justify-between rounded-2xl bg-acc p-7 text-accInk md:col-span-2 min-h-[180px]"
+              class="reveal flex min-h-[180px] flex-col justify-between rounded-2xl bg-acc p-7 text-accInk md:col-span-2"
               style="--stagger: 1"
             >
-              <i class="ph ph-users-three text-3xl" aria-hidden="true"></i>
+              <i
+                class="ph ph-users-three text-3xl"
+                aria-hidden="true"
+              ></i>
+
               <div class="mt-auto">
-                <p class="font-bold text-lg">Jahit Seragam</p>
+
+                <p class="text-lg font-bold">
+                  Jahit Seragam
+                </p>
+
                 <p class="mt-2 text-sm leading-relaxed opacity-80">
                   Seragam kerja, seragam sekolah, seragam komunitas, dll.
                 </p>
+
               </div>
             </article>
 
-            <!-- 4. Dress & Kebaya - tengah bawah -->
+            <!-- Dress -->
             <article
-              class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7 md:col-span-2 min-h-[180px]"
+              class="reveal flex min-h-[180px] flex-col justify-between rounded-2xl border border-line bg-card p-7 md:col-span-2"
               style="--stagger: 2"
             >
-              <i class="ph ph-dress text-3xl text-acc" aria-hidden="true"></i>
+              <i
+                class="ph ph-dress text-3xl text-acc"
+                aria-hidden="true"
+              ></i>
+
               <div class="mt-auto">
-                <p class="font-bold text-lg">Dress & Kebaya</p>
-                <p class="mt-2 text-sm leading-relaxed text-mut">
-                  Kebaya kutubaru, dress kondangan, gaun wisuda. Bisa pakai kain
-                  sendiri atau pilih di studio.
+
+                <p class="text-lg font-bold">
+                  Dress &amp; Kebaya
                 </p>
+
+                <p class="mt-2 text-sm leading-relaxed text-mut">
+                  Kebaya kutubaru, dress kondangan, gaun wisuda.
+                  Bisa pakai kain sendiri atau pilih di studio.
+                </p>
+
               </div>
             </article>
 
-            <!-- 5. Kemeja & Celana - kanan bawah -->
+            <!-- Kemeja -->
             <article
-              class="reveal flex flex-col justify-between rounded-2xl bg-card p-7 md:col-span-2 min-h-[180px]"
+              class="reveal flex min-h-[180px] flex-col justify-between rounded-2xl bg-card p-7 md:col-span-2"
               style="--stagger: 3"
             >
-              <i class="ph ph-shirtfolded text-3xl text-acc" aria-hidden="true"></i>
+              <i
+                class="ph ph-shirtfolded text-3xl text-acc"
+                aria-hidden="true"
+              ></i>
+
               <div class="mt-auto">
-                <p class="font-bold text-lg">Kemeja & Celana</p>
-                <p class="mt-2 text-sm leading-relaxed text-mut">
-                  Kemeja linen, katun, flanela. Celana chino, denim, wol. Potong
-                  presisi, jahitan rapi.
+
+                <p class="text-lg font-bold">
+                  Kemeja &amp; Celana
                 </p>
+
+                <p class="mt-2 text-sm leading-relaxed text-mut">
+                  Kemeja linen, katun, flanela. Celana chino, denim,
+                  wol. Potong presisi, jahitan rapi.
+                </p>
+
               </div>
             </article>
+
           </div>
         </div>
       </section>
 
-      <!-- ================= GALERI: horizontal scroll-snap strip ================= -->
+      <!-- ================= GALERI ================= -->
       <section id="galeri" class="pb-24 md:pb-32">
+
         <div class="mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl">Hasil yang sudah dipakai tiap hari.</h2>
-          <p class="reveal mt-3 max-w-[55ch] text-sm leading-relaxed text-mut sm:text-base">Geser untuk melihat sebagian pesanan terakhir kami, dari baju pribadi sampai produksi seragam.</p>
+
+          <h2
+            class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl"
+          >
+            Hasil yang sudah dipakai tiap hari.
+          </h2>
+
+          <p
+            class="reveal mt-3 max-w-[55ch] text-sm leading-relaxed text-mut sm:text-base"
+          >
+            Geser untuk melihat sebagian pesanan terakhir kami,
+            dari baju pribadi sampai produksi seragam.
+          </p>
+
         </div>
 
-        <div class="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:px-10 lg:px-[max(2.5rem,calc((100vw-1400px)/2+2.5rem))]">
+        <div
+          class="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:px-10 lg:px-[max(2.5rem,calc((100vw-1400px)/2+2.5rem))]"
+        >
+
           <figure class="w-[240px] shrink-0 snap-start sm:w-[300px]">
             <img
               src="Gambar/s1.jpg"
-              alt="Seragam Sekolah"
+              alt="Seragam sekolah hasil jahitan Berkah Duta Konveksi"
               width="600"
               height="750"
               loading="lazy"
               class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]"
             />
-            <figcaption class="mt-3 text-sm text-mut">Seragam Sekolah</figcaption>
+            <figcaption class="mt-3 text-sm text-mut">
+              Seragam Sekolah
+            </figcaption>
           </figure>
+
           <figure class="w-[240px] shrink-0 snap-start sm:w-[300px]">
             <img
               src="Gambar/j1.jpg"
-              alt="Seragam barista produksi 14 potong untuk kafe lokal"
+              alt="Jas kantoran hasil jahitan Berkah Duta Konveksi"
               width="600"
               height="750"
               loading="lazy"
               class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]"
             />
-            <figcaption class="mt-3 text-sm text-mut">Jas kantoran</figcaption>
+            <figcaption class="mt-3 text-sm text-mut">
+              Jas kantoran
+            </figcaption>
           </figure>
+
           <figure class="w-[240px] shrink-0 snap-start sm:w-[300px]">
-            <img src="Gambar/k1.jpg" alt="Kemeja linen custom dengan pola dibuat individual" width="600" height="750" loading="lazy" class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]" />
-            <figcaption class="mt-3 text-sm text-mut">Kemeja linen, pola individual</figcaption>
+            <img
+              src="Gambar/k1.jpg"
+              alt="Kemeja linen custom dengan pola individual"
+              width="600"
+              height="750"
+              loading="lazy"
+              class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]"
+            />
+            <figcaption class="mt-3 text-sm text-mut">
+              Kemeja linen, pola individual
+            </figcaption>
           </figure>
+
           <figure class="w-[240px] shrink-0 snap-start sm:w-[300px]">
-            <img src="Gambar/k2.jpg" alt="Dress kondangan dijahit dari kain bawaan pelanggan" width="600" height="750" loading="lazy" class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]" />
-            <figcaption class="mt-3 text-sm text-mut">Dress kondangan dari bahan sendiri</figcaption>
+            <img
+              src="Gambar/k2.jpg"
+              alt="Dress kondangan hasil jahitan custom"
+              width="600"
+              height="750"
+              loading="lazy"
+              class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]"
+            />
+            <figcaption class="mt-3 text-sm text-mut">
+              Dress kondangan dari bahan sendiri
+            </figcaption>
           </figure>
+
           <figure class="w-[240px] shrink-0 snap-start sm:w-[300px]">
-            <img src="Gambar/p1.jpg" alt="Jas warisan keluarga yang diperkecil dan dirapikan" width="600" height="750" loading="lazy" class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]" />
-            <figcaption class="mt-3 text-sm text-mut">Kaos Harian</figcaption>
+            <img
+              src="Gambar/p1.jpg"
+              alt="Kaos harian hasil jahitan Berkah Duta Konveksi"
+              width="600"
+              height="750"
+              loading="lazy"
+              class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]"
+            />
+            <figcaption class="mt-3 text-sm text-mut">
+              Kaos Harian
+            </figcaption>
           </figure>
+
           <figure class="w-[240px] shrink-0 snap-start sm:w-[300px]">
-            <img src="Gambar/c1.jpg" alt="Celana chino daily custom hasil jahitan Jahit Pagi" width="600" height="750" loading="lazy" class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]" />
-            <figcaption class="mt-3 text-sm text-mut">Celana chino buat dipakai harian</figcaption>
+            <img
+              src="Gambar/c1.jpg"
+              alt="Celana chino custom hasil jahitan Berkah Duta Konveksi"
+              width="600"
+              height="750"
+              loading="lazy"
+              class="h-[280px] w-full rounded-2xl object-cover sm:h-[340px]"
+            />
+            <figcaption class="mt-3 text-sm text-mut">
+              Celana chino buat dipakai harian
+            </figcaption>
           </figure>
+
         </div>
       </section>
 
-      <!-- ================= TENTANG: split foto-kiri / copy-kanan (satu-satunya split) ================= -->
-      <section id="tentang" class="border-y border-line py-24 md:py-32">
-        <div class="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-10 px-5 md:px-10 lg:grid-cols-[5fr_6fr] lg:gap-16">
-          <div class="reveal relative h-[320px] sm:h-[420px] lg:h-[480px]">
+      <!-- ================= TENTANG ================= -->
+      <section
+        id="tentang"
+        class="border-y border-line py-24 md:py-32"
+      >
+
+        <div
+          class="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-10 px-5 md:px-10 lg:grid-cols-[5fr_6fr] lg:gap-16"
+        >
+
+          <div
+            class="reveal relative h-[320px] sm:h-[420px] lg:h-[480px]"
+          >
             <img
               src="Gambar/kelurga.jpeg"
-              alt="Tim penjahit Jahit Pagi bekerja di studio Taman Siswa"
+              alt="Tim Berkah Duta Konveksi bekerja di tempat usaha"
               width="1000"
               height="1200"
               loading="lazy"
@@ -393,78 +707,251 @@ Kami bantu ukur, potong, dan jahit dengan teliti sesuai keinginanmu.</p>
           </div>
 
           <div>
-            <h2 class="reveal max-w-lg text-3xl font-extrabold tracking-tighter sm:text-4xl">Berawal dari rumah, tumbuh bersama kepercayaan pelanggan..</h2>
-            <p class="reveal mt-5 max-w-[60ch] leading-relaxed text-mut" style="--stagger: 1">
-              Sejak memulai usaha jahit, Bapak Supriyadi dan Ibu Pariyanti selalu mengutamakan kerapian, ketelitian, dan kepuasan setiap pelanggan. Berawal dari mesin jahit sederhana di rumah, usaha ini terus berkembang berkat kepercayaan dan dukungan pelanggan.
-            </p>
-            <p class="reveal mt-4 max-w-[60ch] leading-relaxed text-mut" style="--stagger: 2">Bagi kami, setiap pakaian bukan sekadar jahitan. Setiap potongan, ukuran, dan detail dikerjakan dengan sepenuh hati agar menghasilkan pakaian yang nyaman, rapi, dan sesuai dengan keinginan pelanggan..</p>
 
-            <dl class="reveal mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8" style="--stagger: 3">
+            <h2
+              class="reveal max-w-lg text-3xl font-extrabold tracking-tighter sm:text-4xl"
+            >
+              Berawal dari rumah, tumbuh bersama kepercayaan pelanggan.
+            </h2>
+
+            <p
+              class="reveal mt-5 max-w-[60ch] leading-relaxed text-mut"
+              style="--stagger: 1"
+            >
+              Sejak memulai usaha jahit, Bapak Supriyadi dan Ibu Pariyanti
+              selalu mengutamakan kerapian, ketelitian, dan kepuasan setiap
+              pelanggan. Berawal dari mesin jahit sederhana di rumah,
+              usaha ini terus berkembang berkat kepercayaan dan dukungan
+              pelanggan.
+            </p>
+
+            <p
+              class="reveal mt-4 max-w-[60ch] leading-relaxed text-mut"
+              style="--stagger: 2"
+            >
+              Bagi kami, setiap pakaian bukan sekadar jahitan. Setiap
+              potongan, ukuran, dan detail dikerjakan dengan sepenuh hati
+              agar menghasilkan pakaian yang nyaman, rapi, dan sesuai
+              dengan keinginan pelanggan.
+            </p>
+
+            <dl
+              class="reveal mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8"
+              style="--stagger: 3"
+            >
+
               <div>
-                <dt class="text-xs font-bold uppercase tracking-[0.14em] text-mut">Sejak</dt>
-                <dd class="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-3xl">2008</dd>
+                <dt
+                  class="text-xs font-bold uppercase tracking-[0.14em] text-mut"
+                >
+                  Sejak
+                </dt>
+
+                <dd
+                  class="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-3xl"
+                >
+                  2008
+                </dd>
               </div>
+
               <div>
-                <dt class="text-xs font-bold uppercase tracking-[0.14em] text-mut">Pesanan selesai</dt>
-                <dd class="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-3xl">2.100+</dd>
+                <dt
+                  class="text-xs font-bold uppercase tracking-[0.14em] text-mut"
+                >
+                  Pesanan selesai
+                </dt>
+
+                <dd
+                  class="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-3xl"
+                >
+                  2.100+
+                </dd>
               </div>
+
               <div>
-                <dt class="text-xs font-bold uppercase tracking-[0.14em] text-mut">Penjahit tetap</dt>
-                <dd class="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-3xl">2</dd>
+                <dt
+                  class="text-xs font-bold uppercase tracking-[0.14em] text-mut"
+                >
+                  Penjahit tetap
+                </dt>
+
+                <dd
+                  class="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-3xl"
+                >
+                  2
+                </dd>
               </div>
+
             </dl>
           </div>
+
         </div>
       </section>
 
-      <!-- ================= TESTIMONI: full-width image + scrim ================= -->
+      <!-- ================= TESTIMONI ================= -->
       <section class="relative isolate overflow-hidden">
-        <img src="Gambar/foto.jpg" alt="Mesin jahit dan tumpukan kain di studio Jahit Pagi" width="1920" height="900" loading="lazy" class="absolute inset-0 -z-10 h-full w-full object-cover" />
-        <div class="absolute inset-0 -z-10" style="background: var(--scrim)"></div>
 
-        <div class="mx-auto max-w-3xl px-5 py-28 text-center md:py-40">
+        <img
+          src="Gambar/foto.jpg"
+          alt="Mesin jahit dan kain di tempat usaha Berkah Duta Konveksi"
+          width="1920"
+          height="900"
+          loading="lazy"
+          class="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+
+        <div
+          class="absolute inset-0 -z-10"
+          style="background: var(--scrim)"
+        ></div>
+
+        <div
+          class="mx-auto max-w-3xl px-5 py-28 text-center md:py-40"
+        >
+
           <blockquote class="reveal">
-            <p class="text-2xl font-bold leading-snug tracking-tight text-white sm:text-3xl">“Setiap jahitan punya cerita. Kami memulai dari usaha kecil, satu pakaian demi satu pakaian, hingga kepercayaan pelanggan menjadi bagian terbesar dari perjalanan kami”</p>
+
+            <p
+              class="text-2xl font-bold leading-snug tracking-tight text-white sm:text-3xl"
+            >
+              “Setiap jahitan punya cerita. Kami memulai dari usaha kecil,
+              satu pakaian demi satu pakaian, hingga kepercayaan pelanggan
+              menjadi bagian terbesar dari perjalanan kami.”
+            </p>
+
             <footer class="mt-6">
-              <p class="font-bold text-white">Supriyadi</p>
-              <p class="text-sm text-zinc-300">owner toko</p>
+
+              <p class="font-bold text-white">
+                Supriyadi
+              </p>
+
+              <p class="text-sm text-zinc-300">
+                Owner Berkah Duta Konveksi
+              </p>
+
             </footer>
+
           </blockquote>
+
         </div>
       </section>
 
-      <!-- ================= CARA PESAN: grid 4 kolom proses ================= -->
+      <!-- ================= CARA PESAN ================= -->
       <section id="cara-pesan" class="py-24 md:py-32">
+
         <div class="mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl">Empat langkah tanpa ribet, Pesan Sekarang.</h2>
 
-          <div class="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <h2
+            class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl"
+          >
+            Empat langkah tanpa ribet, Pesan Sekarang.
+          </h2>
+
+          <div
+            class="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4"
+          >
+
             <div class="reveal border-t-2 border-acc pt-5">
-              <i class="ph ph-chat-circle-text text-2xl text-acc" aria-hidden="true"></i>
-              <p class="mt-3 text-lg font-extrabold tracking-tight">Kirim referensi</p>
-              <p class="mt-2 text-sm leading-relaxed text-mut">Ceritakan model yang kamu mau lewat WhatsApp, lengkap dengan foto contohnya kalau ada.</p>
-            </div>
-            <div class="reveal border-t-2 border-line pt-5" style="--stagger: 1">
-              <i class="ph ph-ruler text-2xl text-acc" aria-hidden="true"></i>
-              <p class="mt-3 text-lg font-extrabold tracking-tight">Ukur badan</p>
-              <p class="mt-2 text-sm leading-relaxed text-mut">Datang ke studio, atau tim kami datang ke rumah untuk area Yogyakarta. Gratis.</p>
-            </div>
-            <div class="reveal border-t-2 border-line pt-5" style="--stagger: 2">
-              <i class="ph ph-needle text-2xl text-acc" aria-hidden="true"></i>
-              <p class="mt-3 text-lg font-extrabold tracking-tight">Proses jahit</p>
-              <p class="mt-2 text-sm leading-relaxed text-mut">Custom lima sampai sepuluh hari kerja, permak satu sampai tiga hari. Kami laporkan progres tiap tahap.</p>
-            </div>
-            <div class="reveal border-t-2 border-line pt-5" style="--stagger: 3">
-              <i class="ph ph-package text-2xl text-acc" aria-hidden="true"></i>
-              <p class="mt-3 text-lg font-extrabold tracking-tight">Ambil &amp; pasang</p>
-              <p class="mt-2 text-sm leading-relaxed text-mut">Ambil di studio atau minta kirim. Kurang pas? Revisi gratis dua kali dalam 14 hari.</p>
-            </div>
-          </div>
-        </div>
 
-        <form id="chatForm" class="reveal rounded-2xl border border-line bg-card p-7 md:p-10" style="--stagger: 1">
-            <label for="chatJenis" class="block text-sm font-bold">Jenis pakaian</label>
-            <select id="chatJenis" class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm outline-none focus:border-acc">
+              <i
+                class="ph ph-chat-circle-text text-2xl text-acc"
+                aria-hidden="true"
+              ></i>
+
+              <p class="mt-3 text-lg font-extrabold tracking-tight">
+                Kirim referensi
+              </p>
+
+              <p class="mt-2 text-sm leading-relaxed text-mut">
+                Ceritakan model yang kamu mau lewat WhatsApp,
+                lengkap dengan foto contohnya kalau ada.
+              </p>
+
+            </div>
+
+            <div
+              class="reveal border-t-2 border-line pt-5"
+              style="--stagger: 1"
+            >
+
+              <i
+                class="ph ph-ruler text-2xl text-acc"
+                aria-hidden="true"
+              ></i>
+
+              <p class="mt-3 text-lg font-extrabold tracking-tight">
+                Ukur badan
+              </p>
+
+              <p class="mt-2 text-sm leading-relaxed text-mut">
+                Datang ke tempat usaha untuk melakukan pengukuran
+                dan konsultasi.
+              </p>
+
+            </div>
+
+            <div
+              class="reveal border-t-2 border-line pt-5"
+              style="--stagger: 2"
+            >
+
+              <i
+                class="ph ph-needle text-2xl text-acc"
+                aria-hidden="true"
+              ></i>
+
+              <p class="mt-3 text-lg font-extrabold tracking-tight">
+                Proses jahit
+              </p>
+
+              <p class="mt-2 text-sm leading-relaxed text-mut">
+                Custom lima sampai sepuluh hari kerja, permak satu
+                sampai tiga hari. Kami laporkan progres tiap tahap.
+              </p>
+
+            </div>
+
+            <div
+              class="reveal border-t-2 border-line pt-5"
+              style="--stagger: 3"
+            >
+
+              <i
+                class="ph ph-package text-2xl text-acc"
+                aria-hidden="true"
+              ></i>
+
+              <p class="mt-3 text-lg font-extrabold tracking-tight">
+                Ambil &amp; pasang
+              </p>
+
+              <p class="mt-2 text-sm leading-relaxed text-mut">
+                Ambil di tempat usaha atau minta dikirim.
+                Kurang pas? Revisi gratis dua kali dalam 14 hari.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- FORM WHATSAPP -->
+          <form
+            id="chatForm"
+            class="reveal mt-12 rounded-2xl border border-line bg-card p-7 md:p-10"
+            style="--stagger: 1"
+          >
+
+            <label
+              for="chatJenis"
+              class="block text-sm font-bold"
+            >
+              Jenis pakaian
+            </label>
+
+            <select
+              id="chatJenis"
+              class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm outline-none focus:border-acc"
+            >
               <option>Kemeja</option>
               <option>Gamis</option>
               <option>Dress</option>
@@ -475,289 +962,674 @@ Kami bantu ukur, potong, dan jahit dengan teliti sesuai keinginanmu.</p>
               <option>Lainnya</option>
             </select>
 
-            <label for="chatJumlah" class="mt-6 block text-sm font-bold">Jumlah pakaian</label>
-            <input id="chatJumlah" type="number" min="1" value="1" inputmode="numeric" class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm outline-none focus:border-acc" />
+            <label
+              for="chatJumlah"
+              class="mt-6 block text-sm font-bold"
+            >
+              Jumlah pakaian
+            </label>
 
-            <label for="chatCatatan" class="mt-6 block text-sm font-bold">Catatan tambahan <span class="font-normal text-mut">(opsional)</span></label>
-            <textarea id="chatCatatan" rows="3" placeholder="Contoh: bahan katun, model jahitan biasa…" class="mt-2 w-full resize-none rounded-xl border border-line bg-paper px-4 py-3 text-sm outline-none focus:border-acc"></textarea>
+            <input
+              id="chatJumlah"
+              type="number"
+              min="1"
+              value="1"
+              inputmode="numeric"
+              class="mt-2 w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm outline-none focus:border-acc"
+            />
+
+            <label
+              for="chatCatatan"
+              class="mt-6 block text-sm font-bold"
+            >
+              Catatan tambahan
+              <span class="font-normal text-mut">
+                (opsional)
+              </span>
+            </label>
+
+            <textarea
+              id="chatCatatan"
+              rows="3"
+              placeholder="Contoh: bahan katun, model jahitan biasa…"
+              class="mt-2 w-full resize-none rounded-xl border border-line bg-paper px-4 py-3 text-sm outline-none focus:border-acc"
+            ></textarea>
 
             <div class="mt-8 flex flex-wrap items-center gap-3">
-              <a id="chatSubmit" href="https://wa.me/6285839887894" target="_blank" rel="noopener" class="btn inline-flex items-center gap-2 rounded-full bg-acc px-7 py-3.5 font-bold text-accInk">
-                <i class="ph ph-whatsapp-logo text-xl" aria-hidden="true"></i>
+
+              <a
+                id="chatSubmit"
+                href="https://wa.me/6285839887894"
+                target="_blank"
+                rel="noopener"
+                class="btn inline-flex items-center gap-2 rounded-full bg-acc px-7 py-3.5 font-bold text-accInk"
+              >
+                <i
+                  class="ph ph-whatsapp-logo text-xl"
+                  aria-hidden="true"
+                ></i>
+
                 Kirim via WhatsApp
               </a>
-              <button type="button" id="chatCopy" class="btn rounded-full border border-line px-6 py-3.5 font-bold hover:border-acc">Salin pesan</button>
+
+              <button
+                type="button"
+                id="chatCopy"
+                class="btn rounded-full border border-line px-6 py-3.5 font-bold hover:border-acc"
+              >
+                Salin pesan
+              </button>
+
             </div>
-          
+
           </form>
+
+        </div>
       </section>
 
-      <!-- ================= HARGA UMKM: daftar harga per layanan ================= -->
-      <section id="harga" class="border-y border-line py-24 md:py-32">
-        <div class="mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 class="reveal text-3xl font-extrabold tracking-tighter sm:text-4xl">Harga mengikuti bahan dan model.</h2>
-          <p class="reveal mt-3 max-w-[60ch] text-sm leading-relaxed text-mut sm:text-base">Harga di bawah adalah harga mulai per potong jasa jahit. Tarif final disesuaikan bahan, model, dan kerumitan jahitan.</p>
+      <!-- ================= HARGA ================= -->
+      <section
+        id="harga"
+        class="border-y border-line py-24 md:py-32"
+      >
 
-          <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- 1. Jahit Baju Custom - kartu utama -->
-            <article class="reveal flex flex-col justify-between rounded-2xl border-2 border-acc bg-acc-soft p-7 sm:col-span-2 md:p-8">
+        <div class="mx-auto max-w-[1400px] px-5 md:px-10">
+
+          <h2
+            class="reveal text-3xl font-extrabold tracking-tighter sm:text-4xl"
+          >
+            Harga mengikuti bahan dan model.
+          </h2>
+
+          <p
+            class="reveal mt-3 max-w-[60ch] text-sm leading-relaxed text-mut sm:text-base"
+          >
+            Harga di bawah adalah harga mulai per potong jasa jahit.
+            Tarif final disesuaikan bahan, model, dan kerumitan jahitan.
+          </p>
+
+          <div
+            class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
+
+            <!-- Jahit Custom -->
+            <article
+              class="reveal flex flex-col justify-between rounded-2xl border-2 border-acc bg-acc-soft p-7 sm:col-span-2 md:p-8"
+            >
+
               <div>
+
                 <div class="flex items-start justify-between gap-4">
-                  <i class="ph ph-t-shirt text-3xl text-acc" aria-hidden="true"></i>
-                  <p class="rounded-full bg-acc px-3 py-1 text-xs font-bold text-accInk">Mulai Rp100.000</p>
+
+                  <i
+                    class="ph ph-t-shirt text-3xl text-acc"
+                    aria-hidden="true"
+                  ></i>
+
+                  <p
+                    class="rounded-full bg-acc px-3 py-1 text-xs font-bold text-accInk"
+                  >
+                    Mulai Rp100.000
+                  </p>
+
                 </div>
-                <p class="mt-4 text-xl font-extrabold tracking-tight">Jahit Baju Custom</p>
+
+                <p
+                  class="mt-4 text-xl font-extrabold tracking-tight"
+                >
+                  Jahit Baju Custom
+                </p>
+
                 <details class="mt-4 group">
-                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5">
-                    <span class="text-sm font-bold text-acc">Lihat detail harga</span>
-                    <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5"
+                  >
+
+                    <span class="text-sm font-bold text-acc">
+                      Lihat detail harga
+                    </span>
+
+                    <i
+                      class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                      aria-hidden="true"
+                    ></i>
+
                   </summary>
+
                   <ul class="mt-5 space-y-3 text-sm sm:text-base">
-                    <li class="flex items-center justify-between gap-3">
+
+                    <li
+                      class="flex items-center justify-between gap-3"
+                    >
                       <span class="text-mut">Kemeja</span>
                       <span class="font-bold">Rp100.000</span>
                     </li>
-                    <li class="flex items-center justify-between gap-3">
+
+                    <li
+                      class="flex items-center justify-between gap-3"
+                    >
                       <span class="text-mut">Gamis</span>
                       <span class="font-bold">Rp120.000</span>
                     </li>
-                    <li class="flex items-center justify-between gap-3">
+
+                    <li
+                      class="flex items-center justify-between gap-3"
+                    >
                       <span class="text-mut">Blouse</span>
                       <span class="font-bold">Rp90.000</span>
                     </li>
+
                   </ul>
+
                 </details>
+
               </div>
-              
+
             </article>
 
-            <!-- 2. Permak & Perbaikan Pakaian -->
-            <article class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7">
+            <!-- Permak -->
+            <article
+              class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7"
+            >
+
               <div>
+
                 <div class="flex items-start justify-between gap-4">
-                  <i class="ph ph-scissors text-3xl text-acc" aria-hidden="true"></i>
-                  <p class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc">Mulai Rp15.000</p>
+
+                  <i
+                    class="ph ph-scissors text-3xl text-acc"
+                    aria-hidden="true"
+                  ></i>
+
+                  <p
+                    class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc"
+                  >
+                    Mulai Rp15.000
+                  </p>
+
                 </div>
-                <p class="mt-4 text-xl font-extrabold tracking-tight">Permak &amp; Perbaikan</p>
+
+                <p
+                  class="mt-4 text-xl font-extrabold tracking-tight"
+                >
+                  Permak &amp; Perbaikan
+                </p>
+
                 <details class="mt-4 group">
-                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5">
-                    <span class="text-sm font-bold text-acc">Lihat detail harga</span>
-                    <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5"
+                  >
+
+                    <span class="text-sm font-bold text-acc">
+                      Lihat detail harga
+                    </span>
+
+                    <i
+                      class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                      aria-hidden="true"
+                    ></i>
+
                   </summary>
+
                   <ul class="mt-5 space-y-3 text-sm sm:text-base">
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Potong celana/baju</span>
-                      <span class="font-bold">Rp15.000</span>
+                      <span class="text-mut">
+                        Potong celana/baju
+                      </span>
+                      <span class="font-bold">
+                        Rp15.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Mengecilkan ukuran</span>
-                      <span class="font-bold">Rp20.000</span>
+                      <span class="text-mut">
+                        Mengecilkan ukuran
+                      </span>
+                      <span class="font-bold">
+                        Rp20.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Ganti resleting</span>
-                      <span class="font-bold">Rp25.000</span>
+                      <span class="text-mut">
+                        Ganti resleting
+                      </span>
+                      <span class="font-bold">
+                        Rp25.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Perbaikan jahitan</span>
-                      <span class="font-bold">Rp15.000</span>
+                      <span class="text-mut">
+                        Perbaikan jahitan
+                      </span>
+                      <span class="font-bold">
+                        Rp15.000
+                      </span>
                     </li>
+
                   </ul>
+
                 </details>
+
               </div>
+
             </article>
 
-            <!-- 3. Jahit Seragam -->
-            <article class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7" style="--stagger: 1">
+            <!-- Seragam -->
+            <article
+              class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7"
+              style="--stagger: 1"
+            >
+
               <div>
+
                 <div class="flex items-start justify-between gap-4">
-                  <i class="ph ph-users-three text-3xl text-acc" aria-hidden="true"></i>
-                  <p class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc">Mulai Rp85.000</p>
+
+                  <i
+                    class="ph ph-users-three text-3xl text-acc"
+                    aria-hidden="true"
+                  ></i>
+
+                  <p
+                    class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc"
+                  >
+                    Mulai Rp85.000
+                  </p>
+
                 </div>
-                <p class="mt-4 text-xl font-extrabold tracking-tight">Jahit Seragam</p>
+
+                <p
+                  class="mt-4 text-xl font-extrabold tracking-tight"
+                >
+                  Jahit Seragam
+                </p>
+
                 <details class="mt-4 group">
-                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5">
-                    <span class="text-sm font-bold text-acc">Lihat detail harga</span>
-                    <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5"
+                  >
+
+                    <span class="text-sm font-bold text-acc">
+                      Lihat detail harga
+                    </span>
+
+                    <i
+                      class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                      aria-hidden="true"
+                    ></i>
+
                   </summary>
+
                   <ul class="mt-5 space-y-3 text-sm sm:text-base">
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Seragam sekolah</span>
-                      <span class="font-bold">Rp85.000</span>
+                      <span class="text-mut">
+                        Seragam sekolah
+                      </span>
+                      <span class="font-bold">
+                        Rp85.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Seragam kerja</span>
-                      <span class="font-bold">Rp100.000</span>
+                      <span class="text-mut">
+                        Seragam kerja
+                      </span>
+                      <span class="font-bold">
+                        Rp100.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Seragam organisasi</span>
-                      <span class="font-bold">Rp90.000</span>
+                      <span class="text-mut">
+                        Seragam organisasi
+                      </span>
+                      <span class="font-bold">
+                        Rp90.000
+                      </span>
                     </li>
+
                   </ul>
+
                 </details>
+
               </div>
+
             </article>
 
-            <!-- 4. Dress & Kebaya -->
-            <article class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7" style="--stagger: 2">
+            <!-- Dress -->
+            <article
+              class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7"
+              style="--stagger: 2"
+            >
+
               <div>
+
                 <div class="flex items-start justify-between gap-4">
-                  <i class="ph ph-dress text-3xl text-acc" aria-hidden="true"></i>
-                  <p class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc">Mulai Rp150.000</p>
+
+                  <i
+                    class="ph ph-dress text-3xl text-acc"
+                    aria-hidden="true"
+                  ></i>
+
+                  <p
+                    class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc"
+                  >
+                    Mulai Rp150.000
+                  </p>
+
                 </div>
-                <p class="mt-4 text-xl font-extrabold tracking-tight">Dress &amp; Kebaya</p>
+
+                <p
+                  class="mt-4 text-xl font-extrabold tracking-tight"
+                >
+                  Dress &amp; Kebaya
+                </p>
+
                 <details class="mt-4 group">
-                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5">
-                    <span class="text-sm font-bold text-acc">Lihat detail harga</span>
-                    <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5"
+                  >
+
+                    <span class="text-sm font-bold text-acc">
+                      Lihat detail harga
+                    </span>
+
+                    <i
+                      class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                      aria-hidden="true"
+                    ></i>
+
                   </summary>
+
                   <ul class="mt-5 space-y-3 text-sm sm:text-base">
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Dress sederhana</span>
-                      <span class="font-bold">Rp150.000</span>
+                      <span class="text-mut">
+                        Dress sederhana
+                      </span>
+                      <span class="font-bold">
+                        Rp150.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Gamis</span>
-                      <span class="font-bold">Rp120.000</span>
+                      <span class="text-mut">
+                        Gamis
+                      </span>
+                      <span class="font-bold">
+                        Rp120.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Kebaya</span>
-                      <span class="font-bold">Rp175.000</span>
+                      <span class="text-mut">
+                        Kebaya
+                      </span>
+                      <span class="font-bold">
+                        Rp175.000
+                      </span>
                     </li>
+
                   </ul>
+
                 </details>
+
               </div>
+
             </article>
 
-            <!-- 5. Kemeja & Celana -->
-            <article class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7" style="--stagger: 3">
+            <!-- Kemeja -->
+            <article
+              class="reveal flex flex-col justify-between rounded-2xl border border-line bg-card p-7"
+              style="--stagger: 3"
+            >
+
               <div>
+
                 <div class="flex items-start justify-between gap-4">
-                  <i class="ph ph-shirtfolded text-3xl text-acc" aria-hidden="true"></i>
-                  <p class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc">Mulai Rp90.000</p>
+
+                  <i
+                    class="ph ph-shirtfolded text-3xl text-acc"
+                    aria-hidden="true"
+                  ></i>
+
+                  <p
+                    class="rounded-full bg-acc-soft px-3 py-1 text-xs font-bold text-acc"
+                  >
+                    Mulai Rp90.000
+                  </p>
+
                 </div>
-                <p class="mt-4 text-xl font-extrabold tracking-tight">Kemeja &amp; Celana</p>
+
+                <p
+                  class="mt-4 text-xl font-extrabold tracking-tight"
+                >
+                  Kemeja &amp; Celana
+                </p>
+
                 <details class="mt-4 group">
-                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5">
-                    <span class="text-sm font-bold text-acc">Lihat detail harga</span>
-                    <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 border-t border-line pt-5"
+                  >
+
+                    <span class="text-sm font-bold text-acc">
+                      Lihat detail harga
+                    </span>
+
+                    <i
+                      class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                      aria-hidden="true"
+                    ></i>
+
                   </summary>
+
                   <ul class="mt-5 space-y-3 text-sm sm:text-base">
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Kemeja</span>
-                      <span class="font-bold">Rp90.000</span>
+                      <span class="text-mut">
+                        Kemeja
+                      </span>
+                      <span class="font-bold">
+                        Rp90.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Celana panjang</span>
-                      <span class="font-bold">Rp100.000</span>
+                      <span class="text-mut">
+                        Celana panjang
+                      </span>
+                      <span class="font-bold">
+                        Rp100.000
+                      </span>
                     </li>
+
                     <li class="flex items-center justify-between gap-3">
-                      <span class="text-mut">Celana pendek</span>
-                      <span class="font-bold">Rp75.000</span>
+                      <span class="text-mut">
+                        Celana pendek
+                      </span>
+                      <span class="font-bold">
+                        Rp75.000
+                      </span>
                     </li>
+
                   </ul>
+
                 </details>
+
               </div>
+
             </article>
+
           </div>
         </div>
       </section>
 
-
-
-      <!-- ================= FAQ: accordion ================= -->
+      <!-- ================= FAQ ================= -->
       <section id="faq" class="py-24 md:py-32">
-        <div class="mx-auto max-w-3xl px-5 md:px-10">
-          <h2 class="reveal text-3xl font-extrabold tracking-tighter sm:text-4xl">Yang paling sering ditanyakan.</h2>
 
-          <div class="mt-10 divide-y divide-line border-y border-line">
+        <div class="mx-auto max-w-3xl px-5 md:px-10">
+
+          <h2
+            class="reveal text-3xl font-extrabold tracking-tighter sm:text-4xl"
+          >
+            Yang paling sering ditanyakan.
+          </h2>
+
+          <div
+            class="mt-10 divide-y divide-line border-y border-line"
+          >
+
             <details class="group reveal">
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold">
+
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold"
+              >
                 Berapa lama pengerjaannya?
-                <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                <i
+                  class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
               </summary>
-              <p class="pb-5 text-sm leading-relaxed text-mut sm:text-base">
-                Baju custom lima sampai sepuluh hari kerja, tergantung panjang antrean dan model. Permak biasanya selesai dalam satu sampai tiga hari. Jadwal pasti kami kabari saat order masuk.
+
+              <p
+                class="pb-5 text-sm leading-relaxed text-mut sm:text-base"
+              >
+                Baju custom lima sampai sepuluh hari kerja,
+                tergantung panjang antrean dan model. Permak biasanya
+                selesai dalam satu sampai tiga hari. Jadwal pasti kami
+                kabari saat order masuk.
               </p>
+
             </details>
+
             <details class="group reveal">
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold">
+
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold"
+              >
                 Boleh bawa bahan sendiri?
-                <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                <i
+                  class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
               </summary>
-              <p class="pb-5 text-sm leading-relaxed text-mut sm:text-base">
-                Sangat boleh. Banyak pelanggan membawa kain warisan atau sisa bahan seragam. Kami bantu hitung kecukupan bahannya sebelum jahitan dimulai, biaya tinggal jasa saja.
+
+              <p
+                class="pb-5 text-sm leading-relaxed text-mut sm:text-base"
+              >
+                Sangat boleh. Banyak pelanggan membawa kain warisan
+                atau sisa bahan seragam. Kami bantu hitung kecukupan
+                bahannya sebelum jahitan dimulai, biaya tinggal jasa saja.
               </p>
+
             </details>
+
             <details class="group reveal">
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold">
+
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold"
+              >
                 Seragam minimal order berapa?
-                <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                <i
+                  class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
               </summary>
-              <p class="pb-5 text-sm leading-relaxed text-mut sm:text-base">Produksi seragam dimulai dari 12 potong dengan model yang sama. Untuk jumlah di bawah itu, kami sarankan jalur custom perorangan agar harganya lebih masuk.</p>
+
+              <p
+                class="pb-5 text-sm leading-relaxed text-mut sm:text-base"
+              >
+                Produksi seragam dimulai dari 12 potong dengan model
+                yang sama. Untuk jumlah di bawah itu, kami sarankan
+                jalur custom perorangan agar harganya lebih masuk.
+              </p>
+
             </details>
+
             <details class="group reveal">
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold">
+
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold"
+              >
                 Kalau hasilnya tidak pas?
-                <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                <i
+                  class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
               </summary>
-              <p class="pb-5 text-sm leading-relaxed text-mut sm:text-base">
-                Revisi ukuran gratis dua kali dalam 14 hari setelah pengambilan. Selama itu belum juga pas, kami buat ulang potongan yang bermasalah tanpa biaya.
+
+              <p
+                class="pb-5 text-sm leading-relaxed text-mut sm:text-base"
+              >
+                Revisi ukuran gratis dua kali dalam 14 hari setelah
+                pengambilan. Selama itu belum juga pas, kami buat ulang
+                potongan yang bermasalah tanpa biaya.
               </p>
+
             </details>
+
             <details class="group reveal">
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold">
+
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-bold"
+              >
                 Bisa dikirim ke luar kota?
-                <i class="ph ph-plus faq-icon shrink-0 text-xl text-acc" aria-hidden="true"></i>
+
+                <i
+                  class="ph ph-plus faq-icon shrink-0 text-xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
               </summary>
-              <p class="pb-5 text-sm leading-relaxed text-mut sm:text-base">
-                Bisa. Pengukuran jarak jauh kami pandu, lalu baju jadi dikirim lewat ekspedisi. Sudah rutin kami lakukan untuk pelanggan.
+
+              <p
+                class="pb-5 text-sm leading-relaxed text-mut sm:text-base"
+              >
+                Bisa. Pengukuran jarak jauh kami pandu, lalu baju jadi
+                dikirim lewat ekspedisi. Sudah rutin kami lakukan untuk
+                pelanggan.
               </p>
+
             </details>
+
           </div>
         </div>
       </section>
 
-      <!-- ================= LOKASI: Google Maps embed ================= -->
-      <!-- <section id="lokasi" class="py-24 md:py-32 bg-card border-y border-line">
-        <div class="mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 class="reveal max-w-xl text-3xl font-extrabold tracking-tighter sm:text-4xl">
-            Temui kami di studio.
-          </h2>
-          <p class="reveal mt-3 max-w-[55ch] leading-relaxed text-mut">
-            Datang langsung untuk konsultasi, pengukuran, atau mengambil pesanan.
-            Parkir motor & mobil tersedia di depan toko.
-          </p>
-
-          <div class="reveal mt-10 relative rounded-2xl overflow-hidden" style="--stagger: 1">
-            <iframe
-              title="Lokasi Jahit Pagi di Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1173.0753292237641!2d104.89253355290644!3d-5.209649208578186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e47493d77ac14d7%3A0x3414bf4290fa05db!2sVerMak%20Levis!5e0!3m2!1sen!2sid!4v1787888378488!5m2!1sen!2sid"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              class="absolute inset-0 h-[400px] w-full border-0"
-              allowfullscreen=""
-              aria-label="Peta lokasi Jahit Pagi (VerMak Levis)"
-            ></iframe>
-          </div>
-
-          <address class="reveal mt-6 not-italic text-sm leading-relaxed text-mut" style="--stagger: 2">
-            <p class="font-bold text-ink">Jahit Pagi</p>
-            <p>Jl. Taman Siswa No. 62, Yogyakarta 55151</p>
-            <p>Senin – Sabtu, 09.00 – 17.00</p>
-          </address>
-        </div>
-      </section> -->
-
-      <!-- ================= FOOTER CTA + KONTAK ================= -->
+      <!-- ================= FOOTER ================= -->
       <footer class="border-t border-line">
-        <div class="mx-auto max-w-[1400px] px-5 py-20 md:px-10 md:py-28">
-          
 
-          <!-- ================= LOKASI: visualisasi maps di footer ================= -->
-          <div class="mt-16 grid grid-cols-1 gap-4 lg:grid-cols-[2fr_1fr]">
-            <div class="reveal relative overflow-hidden rounded-2xl border border-line">
+        <div
+          class="mx-auto max-w-[1400px] px-5 py-20 md:px-10 md:py-28"
+        >
+
+          <!-- MAPS -->
+          <div
+            class="mt-16 grid grid-cols-1 gap-4 lg:grid-cols-[2fr_1fr]"
+          >
+
+            <div
+              class="reveal relative overflow-hidden rounded-2xl border border-line"
+            >
+
               <iframe
-                title="Lokasi Jasa Jahit di Google Maps"
+                title="Lokasi Berkah Duta Konveksi di Google Maps"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1005.163326565402!2d104.89206622833137!3d-5.210085420195228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1787995216155!5m2!1sen!2sid"
                 loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin"
@@ -765,133 +1637,274 @@ Kami bantu ukur, potong, dan jahit dengan teliti sesuai keinginanmu.</p>
                 allowfullscreen=""
                 class="h-[340px] w-full border-0 sm:h-[420px]"
               ></iframe>
+
             </div>
-            <div class="reveal flex flex-col justify-between gap-6 rounded-2xl border border-line bg-card p-7" style="--stagger: 1">
+
+            <div
+              class="reveal flex flex-col justify-between gap-6 rounded-2xl border border-line bg-card p-7"
+              style="--stagger: 1"
+            >
+
               <div>
-                <i class="ph ph-map-pin text-2xl text-acc" aria-hidden="true"></i>
-                <p class="mt-3 text-lg font-extrabold tracking-tight">Berkah Duta Konveksi</p>
-                <p class="mt-2 text-sm leading-relaxed text-mut">Jl. Sendang Mulyo Dusun 08 Rt 03/08</p>
-                <p class="mt-1 text-sm leading-relaxed text-mut">Senin - Sabtu, 09.00 - 17.00</p>
+
+                <i
+                  class="ph ph-map-pin text-2xl text-acc"
+                  aria-hidden="true"
+                ></i>
+
+                <p
+                  class="mt-3 text-lg font-extrabold tracking-tight"
+                >
+                  Berkah Duta Konveksi
+                </p>
+
+                <p class="mt-2 text-sm leading-relaxed text-mut">
+                  Jl. Sendang Mulyo Dusun 08 RT 03/08
+                </p>
+
+                <p class="mt-1 text-sm leading-relaxed text-mut">
+                  Senin - Sabtu, 09.00 - 17.00
+                </p>
+
               </div>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=-5.210085420195228,104.89206622833137" target="_blank" rel="noopener" class="btn inline-flex items-center justify-center gap-2 rounded-full bg-acc px-5 py-3 text-sm font-bold text-accInk">
-                <i class="ph ph-navigation-arrow text-lg" aria-hidden="true"></i>
+
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=-5.210085420195228,104.89206622833137"
+                target="_blank"
+                rel="noopener"
+                class="btn inline-flex items-center justify-center gap-2 rounded-full bg-acc px-5 py-3 text-sm font-bold text-accInk"
+              >
+
+                <i
+                  class="ph ph-navigation-arrow text-lg"
+                  aria-hidden="true"
+                ></i>
+
                 Buka di Google Maps
+
               </a>
+
             </div>
+
           </div>
 
-          <div class="mt-16 flex flex-col gap-8 border-t border-line pt-8 text-sm text-mut md:flex-row md:items-start md:justify-between">
+          <!-- FOOTER BOTTOM -->
+          <div
+            class="mt-16 flex flex-col gap-8 border-t border-line pt-8 text-sm text-mut md:flex-row md:items-start md:justify-between"
+          >
+
             <div>
+
               <p class="flex items-center gap-2">
-                <span class="grid h-6 w-6 place-items-center rounded-full bg-acc text-xs font-extrabold text-accInk">BDK</span>
-                <span class="text-base font-extrabold tracking-tight text-ink">Berkah Duta Konveksi</span>
-              <p class="mt-2">Jl. Sendang Mulyo Dusun 08 Rt 03/08</p>
-              <p>Senin - Sabtu, 09.00 - 17.00</p>
+
+                <span
+                  class="grid h-6 w-6 place-items-center rounded-full bg-acc text-xs font-extrabold text-accInk"
+                >
+                  BDK
+                </span>
+
+                <span
+                  class="text-base font-extrabold tracking-tight text-ink"
+                >
+                  Berkah Duta Konveksi
+                </span>
+
+              </p>
+
+              <p class="mt-2">
+                Jl. Sendang Mulyo Dusun 08 RT 03/08
+              </p>
+
+              <p>
+                Senin - Sabtu, 09.00 - 17.00
+              </p>
+
             </div>
-            <div class="flex flex-wrap items-center gap-x-8 gap-y-3">
-              <a href="#layanan" class="hover:text-ink">Layanan</a>
-              <a href="#galeri" class="hover:text-ink">Galeri</a>
-              <a href="#tentang" class="hover:text-ink">Tentang</a>
-              <a href="#harga" class="hover:text-ink">Harga</a>
-              <a href="#faq" class="hover:text-ink">FAQ</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-ink">
-                <i class="ph ph-instagram-logo text-lg" aria-hidden="true"></i>
-                @BerkahDutaKonveksi
+
+            <div
+              class="flex flex-wrap items-center gap-x-8 gap-y-3"
+            >
+
+              <a href="#layanan" class="hover:text-ink">
+                Layanan
               </a>
+
+              <a href="#galeri" class="hover:text-ink">
+                Galeri
+              </a>
+
+              <a href="#tentang" class="hover:text-ink">
+                Tentang
+              </a>
+
+              <a href="#harga" class="hover:text-ink">
+                Harga
+              </a>
+
+              <a href="#faq" class="hover:text-ink">
+                FAQ
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center gap-2 hover:text-ink"
+              >
+
+                <i
+                  class="ph ph-instagram-logo text-lg"
+                  aria-hidden="true"
+                ></i>
+
+                @BerkahDutaKonveksi
+
+              </a>
+
             </div>
+
           </div>
+
         </div>
       </footer>
+
     </main>
 
+    <!-- ================= JAVASCRIPT REVEAL ================= -->
     <script>
-      // Reveal on scroll via IntersectionObserver (tanpa scroll listener).
-      // Degradasi instan di bawah prefers-reduced-motion (CSS sudah gate).
       (function () {
         var els = document.querySelectorAll(".reveal");
+
         if (!("IntersectionObserver" in window)) {
           els.forEach(function (el) {
             el.classList.add("in");
           });
+
           return;
         }
+
         var io = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
+
               if (entry.isIntersecting) {
                 entry.target.classList.add("in");
                 io.unobserve(entry.target);
               }
+
             });
           },
-          { threshold: 0.15, rootMargin: "0px 0px -5% 0px" },
+          {
+            threshold: 0.15,
+            rootMargin: "0px 0px -5% 0px"
+          }
         );
+
         els.forEach(function (el) {
           io.observe(el);
         });
+
       })();
     </script>
 
+    <!-- ================= JAVASCRIPT WHATSAPP ================= -->
     <script>
-      // Template chat WhatsApp: susun pesan dari form, siapkan tautan kirim.
       (function () {
+
         var STORE = "Berkah Duta Konveksi";
         var PHONE = "6285839887894";
+
         var form = document.getElementById("chatForm");
+
         if (!form) return;
+
         var jenis = document.getElementById("chatJenis");
         var jumlah = document.getElementById("chatJumlah");
         var catatan = document.getElementById("chatCatatan");
-        var preview = document.getElementById("chatPreview");
         var submit = document.getElementById("chatSubmit");
         var copyBtn = document.getElementById("chatCopy");
 
         function compose() {
+
           var lines = [
             "Halo, Pak/Bu. Saya tertarik menggunakan jasa jahit dari " + STORE + ".",
             "Saya ingin bertanya mengenai layanan dan harga jahit.",
             "",
             "Jenis pakaian: " + (jenis.value || "-"),
-            "Jumlah: " + (jumlah.value || "-"),
+            "Jumlah: " + (jumlah.value || "-")
           ];
+
           var note = catatan.value.trim();
-          if (note) lines.push("", "Catatan: " + note);
+
+          if (note) {
+            lines.push("", "Catatan: " + note);
+          }
+
           lines.push(
             "",
             "Apakah bisa dibantu untuk informasi harga dan estimasi waktu pengerjaannya?",
-            "Terima kasih \u{1F64F}",
+            "Terima kasih 🙏"
           );
+
           var msg = lines.join("\n");
-          preview.textContent = msg;
-          submit.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+
+          submit.href =
+            "https://wa.me/" +
+            PHONE +
+            "?text=" +
+            encodeURIComponent(msg);
+
           return msg;
         }
 
         [jenis, jumlah, catatan].forEach(function (el) {
+
           el.addEventListener("input", compose);
+
         });
 
         copyBtn.addEventListener("click", function () {
+
           var text = compose();
-          if (navigator.clipboard && navigator.clipboard.writeText) {
+
+          if (
+            navigator.clipboard &&
+            navigator.clipboard.writeText
+          ) {
+
             navigator.clipboard.writeText(text);
+
           } else {
+
             var ta = document.createElement("textarea");
+
             ta.value = text;
+
             document.body.appendChild(ta);
+
             ta.select();
+
             document.execCommand("copy");
+
             document.body.removeChild(ta);
           }
+
           var original = copyBtn.textContent;
+
           copyBtn.textContent = "Tersalin!";
+
           setTimeout(function () {
+
             copyBtn.textContent = original;
+
           }, 1600);
+
         });
 
         compose();
+
       })();
     </script>
+
   </body>
 </html>
